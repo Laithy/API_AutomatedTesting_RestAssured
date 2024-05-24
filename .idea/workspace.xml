@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6bdad29-dac9-478d-86e6-5a9d140c7ac6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Models/TodoPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Models/UserPojo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/RegistrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/TodoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/TodoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,9 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2gtQiDfode4YebdsEYxtrP8bpUK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -42,12 +46,15 @@
     "TestNG.LoginTest.User_Login_With_Invalid_Data.executor": "Run",
     "TestNG.LoginTest.User_Login_With_Valid_Data.executor": "Run",
     "TestNG.LoginTest.executor": "Run",
+    "TestNG.RegistrationTest.User_Registration_With_Existing_Mail.executor": "Run",
+    "TestNG.RegistrationTest.User_Registration_With_Valid_Mail.executor": "Run",
     "TestNG.RegistrationTest.executor": "Run",
     "TestNG.TodoTest.User_Adds_a_New_Entry.executor": "Run",
     "TestNG.TodoTest.User_Adds_a_New_Entry_Empty_Data_Field.executor": "Run",
     "TestNG.TodoTest.User_Adds_a_New_Entry_No_Auth.executor": "Run",
     "TestNG.TodoTest.User_Deletes_The_New_Entry.executor": "Run",
     "TestNG.TodoTest.User_Deletes_The_New_Entry_No_Auth.executor": "Run",
+    "TestNG.TodoTest.User_Deletes_The_New_Entry_Wrong_ID.executor": "Run",
     "TestNG.TodoTest.User_Views_The_New_Entry.executor": "Run",
     "TestNG.TodoTest.User_Views_The_New_Entry_No_Auth.executor": "Run",
     "TestNG.TodoTest.executor": "Run",
@@ -169,9 +176,9 @@
       <list>
         <item itemvalue="TestNG.TodoTest.User_Deletes_The_New_Entry" />
         <item itemvalue="TestNG.TodoTest.User_Deletes_The_New_Entry_No_Auth" />
+        <item itemvalue="TestNG.TodoTest.User_Views_The_New_Entry_No_Auth" />
         <item itemvalue="TestNG.TodoTest.User_Views_The_New_Entry" />
         <item itemvalue="TestNG.TodoTest.User_Adds_a_New_Entry" />
-        <item itemvalue="TestNG.TodoTest.User_Views_The_New_Entry_No_Auth" />
       </list>
     </recent_temporary>
   </component>

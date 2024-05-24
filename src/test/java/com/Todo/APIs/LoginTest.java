@@ -1,5 +1,6 @@
 package com.Todo.APIs;
 
+import com.Todo.Models.UserPojo;
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 
@@ -14,11 +15,11 @@ public class LoginTest {
     @Test
     public void User_Login_With_Valid_Data() {
 
-        File loginData = new File("src/test/resources/JsonFiles/LoginData/LoginDataValid.json");
+        UserPojo user = new UserPojo("mahmoud3@example.com","12345678");
 
         given().baseUri("https://todo.qacart.com")
                 .contentType(ContentType.JSON)
-                .body(loginData)
+                .body(user)
 
                 .when().post("/api/v1/users/login")
 
@@ -34,11 +35,11 @@ public class LoginTest {
     @Test
     public void User_Login_With_Invalid_Data() {
 
-        File loginData = new File("src/test/resources/JsonFiles/LoginData/LoginDataInvalid.json");
+        UserPojo user = new UserPojo("mahmoud3@example.com","12345");
 
         given().baseUri("https://todo.qacart.com")
                 .contentType(ContentType.JSON)
-                .body(loginData)
+                .body(user)
 
                 .when().post("/api/v1/users/login")
 
@@ -53,11 +54,11 @@ public class LoginTest {
     @Test
     public void User_Login_With_Empty_Data_Field() {
 
-        File loginData = new File("src/test/resources/JsonFiles/LoginData/LoginDataEmptyDataField.json");
+        UserPojo user = new UserPojo("","12345678");
 
         given().baseUri("https://todo.qacart.com")
                 .contentType(ContentType.JSON)
-                .body(loginData)
+                .body(user)
 
                 .when().post("/api/v1/users/login")
 

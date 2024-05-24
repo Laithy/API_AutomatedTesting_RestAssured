@@ -1,5 +1,6 @@
 package com.Todo.APIs;
 
+import com.Todo.Models.UserPojo;
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 
@@ -14,11 +15,11 @@ public class RegistrationTest {
     @Test
     public void User_Registration_With_Valid_Mail() {
 
-        File regData = new File("src/test/resources/JsonFiles/RegistrationData/RegistrationDataValidData.json");
+        UserPojo user = new UserPojo("Mahmoud","Elaithy","mahmoud3@example.com","12345678");
 
         given().baseUri("https://todo.qacart.com")
                 .contentType(ContentType.JSON)
-                .body(regData)
+                .body(user)
 
                 .when().post("/api/v1/users/register")
 
@@ -34,11 +35,11 @@ public class RegistrationTest {
     @Test
     public void User_Registration_With_Existing_Mail () {
 
-        File regData = new File("src/test/resources/JsonFiles/RegistrationData/RegistrationDataExistingMail.json");
+        UserPojo user = new UserPojo("Mahmoud","Elaithy","mahmoud@example.com","12345678");
 
         given().baseUri("https://todo.qacart.com")
                 .contentType(ContentType.JSON)
-                .body(regData)
+                .body(user)
 
                 .when().post("/api/v1/users/register")
 
@@ -53,11 +54,11 @@ public class RegistrationTest {
     @Test
     public void User_Registration_With_Invalid_Mail () {
 
-        File regData = new File("src/test/resources/JsonFiles/RegistrationData/RegistrationDataInvalidMail.json");
+        UserPojo user = new UserPojo("Mahmoud","Elaithy","mahmoud3","12345678");
 
         given().baseUri("https://todo.qacart.com")
                 .contentType(ContentType.JSON)
-                .body(regData)
+                .body(user)
 
                 .when().post("/api/v1/users/register")
 
@@ -72,11 +73,11 @@ public class RegistrationTest {
     @Test
     public void User_Registration_With_Empty_Data_Field() {
 
-        File regData = new File("src/test/resources/JsonFiles/RegistrationData/RegistrationDataEmptyDataField.json");
+        UserPojo user = new UserPojo("","Elaithy","mahmoud3@example.com","12345678");
 
         given().baseUri("https://todo.qacart.com")
                 .contentType(ContentType.JSON)
-                .body(regData)
+                .body(user)
 
                 .when().post("/api/v1/users/register")
 
