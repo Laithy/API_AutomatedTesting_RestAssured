@@ -6,18 +6,22 @@ import com.Todo.Models.MessagePojo;
 import com.Todo.Models.TodoPojo;
 import com.Todo.Steps.TodoSteps;
 import com.Todo.Steps.UserSteps;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
+@Feature("Todo feature")
 public class TodoTest {
 
     /*------------------------------------------------------------------------------------------------------------------
     Adds Entry
     Positive scenario*/
-    @Test
+    @Story("User adds a new entry")
+    @Test(description = "User adds a new entry")
     public void User_Adds_a_New_Entry() {
 
         //Test data
@@ -39,7 +43,8 @@ public class TodoTest {
     }
 
     //Negative scenario
-    @Test
+    @Story("User add a new entry but with no authentication")
+    @Test(description = "User add a new entry but with no authentication")
     public void User_Adds_a_New_Entry_No_Auth() {
 
         //Test data
@@ -57,7 +62,8 @@ public class TodoTest {
 
     }
 
-    @Test
+    @Story("User add a new entry but with empty data field")
+    @Test(description = "User add a new entry but with empty data field")
     public void User_Adds_a_New_Entry_Empty_Data_Field() {
 
         //Test data
@@ -80,7 +86,8 @@ public class TodoTest {
     /*------------------------------------------------------------------------------------------------------------------
     Views Entry
     Positive scenario*/
-    @Test
+    @Story("User views a new entry")
+    @Test(description = "User views a new entry")
     public void User_Views_The_New_Entry() {
 
         //Test data
@@ -103,7 +110,8 @@ public class TodoTest {
     }
 
     //Negative scenario
-    @Test
+    @Story("User tries to view a new entry but with no authentication")
+    @Test(description = "User tries to view a new entry but with no authentication")
     public void User_Views_The_New_Entry_No_Auth() {
 
         //Test data
@@ -126,7 +134,8 @@ public class TodoTest {
     /*------------------------------------------------------------------------------------------------------------------
     Deletes Entry
     Positive scenario*/
-    @Test
+    @Story("User deletes an entry")
+    @Test(description = "User deletes an entry")
     public void User_Deletes_The_New_Entry() {
 
         //Test data
@@ -149,7 +158,8 @@ public class TodoTest {
     }
 
     //Negative scenario
-    @Test
+    @Story("User tries to delete an entry but with no authentication")
+    @Test(description = "User tries to delete an entry but with no authentication")
     public void User_Deletes_The_New_Entry_No_Auth() {
 
         //Test data

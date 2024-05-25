@@ -5,16 +5,19 @@ import com.Todo.Data.ErrorMessage;
 import com.Todo.Models.MessagePojo;
 import com.Todo.Models.UserPojo;
 import com.Todo.Steps.UserSteps;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
-
+@Feature("Login feature")
 public class LoginTest {
 
     //Positive scenario
-    @Test
+    @Story("User login")
+    @Test(description = "User login")
     public void User_Login_With_Valid_Data() {
 
         //Test data
@@ -33,7 +36,8 @@ public class LoginTest {
     }
 
     //Negative scenario
-    @Test
+    @Story("User tries to login with wrong data")
+    @Test(description = "User tries to login with wrong data")
     public void User_Login_With_Invalid_Data() {
 
         //Test data
@@ -51,7 +55,8 @@ public class LoginTest {
 
     }
 
-    @Test
+    @Story("User tries to login but with empty data fields")
+    @Test(description = "User tries to login but with empty data fields")
     public void User_Login_With_Empty_Data_Field() {
 
         //Test data

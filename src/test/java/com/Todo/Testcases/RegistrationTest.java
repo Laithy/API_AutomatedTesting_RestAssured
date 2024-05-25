@@ -5,6 +5,8 @@ import com.Todo.Data.ErrorMessage;
 import com.Todo.Models.MessagePojo;
 import com.Todo.Models.UserPojo;
 import com.Todo.Steps.UserSteps;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
@@ -12,10 +14,12 @@ import org.testng.annotations.Test;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
+@Feature("Registration feature")
 public class RegistrationTest {
 
     //Positive scenarios
-    @Test
+    @Story("User register with valid mail")
+    @Test(description = "User register with valid mail")
     public void User_Registration_With_Valid_Mail() {
 
         //Test data
@@ -34,7 +38,8 @@ public class RegistrationTest {
     }
 
     //Negative scenarios
-    @Test
+    @Story("User register with an existing mail")
+    @Test(description = "User register with an existing mail")
     public void User_Registration_With_Existing_Mail () {
 
         //Test data
@@ -52,7 +57,8 @@ public class RegistrationTest {
 
     }
 
-    @Test
+    @Story("User register with an invalid mail")
+    @Test(description = "User register with an invalid mail")
     public void User_Registration_With_Invalid_Mail () {
 
         //Test data
@@ -70,7 +76,8 @@ public class RegistrationTest {
 
     }
 
-    @Test
+    @Story("User registers with an empty data field")
+    @Test(description = "User registers with an empty data field")
     public void User_Registration_With_Empty_Data_Field() {
 
         //Test data
