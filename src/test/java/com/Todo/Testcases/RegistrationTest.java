@@ -3,6 +3,7 @@ package com.Todo.Testcases;
 import com.Todo.APIs.UserApi;
 import com.Todo.Models.MessagePojo;
 import com.Todo.Models.UserPojo;
+import com.Todo.Steps.UserSteps;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
@@ -19,7 +20,7 @@ public class RegistrationTest {
     public void User_Registration_With_Valid_Mail() {
 
         //Test data
-        UserPojo user = new UserPojo("Mahmoud","Elaithy","mahmoud78@example.com","12345678");
+        UserPojo user = UserSteps.GenerateUser();
 
         //Sending request
         Response res = UserApi.Register(user);
@@ -38,7 +39,7 @@ public class RegistrationTest {
     public void User_Registration_With_Existing_Mail () {
 
         //Test data
-        UserPojo user = new UserPojo("Mahmoud","Elaithy","mahmoud@example.com","12345678");
+        UserPojo user = UserSteps.GenerateRegisteredUser();
 
         //Sending request
         Response res = UserApi.Register(user);
@@ -56,7 +57,7 @@ public class RegistrationTest {
     public void User_Registration_With_Invalid_Mail () {
 
         //Test data
-        UserPojo user = new UserPojo("Mahmoud","Elaithy","mahmoud3","12345678");
+        UserPojo user = UserSteps.GenerateUserWithInvalidMail();
 
         //Sending request
         Response res = UserApi.Register(user);
@@ -74,7 +75,7 @@ public class RegistrationTest {
     public void User_Registration_With_Empty_Data_Field() {
 
         //Test data
-        UserPojo user = new UserPojo("","Elaithy","mahmoud3@example.com","12345678");
+        UserPojo user = UserSteps.GenerateUserWithEmptyDataField();
 
         //Sending request
         Response res = UserApi.Register(user);

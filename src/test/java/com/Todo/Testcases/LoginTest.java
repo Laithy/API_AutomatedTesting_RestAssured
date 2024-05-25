@@ -3,12 +3,10 @@ package com.Todo.Testcases;
 import com.Todo.APIs.UserApi;
 import com.Todo.Models.MessagePojo;
 import com.Todo.Models.UserPojo;
-import io.restassured.http.ContentType;
+import com.Todo.Steps.UserSteps;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
-
-import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
@@ -19,7 +17,7 @@ public class LoginTest {
     public void User_Login_With_Valid_Data() {
 
         //Test data
-        UserPojo user = new UserPojo("mahmoud3@example.com","12345678");
+        UserPojo user = UserSteps.GenerateLoginData();
 
         //Sending request
         Response res = UserApi.Login(user);
@@ -38,7 +36,7 @@ public class LoginTest {
     public void User_Login_With_Invalid_Data() {
 
         //Test data
-        UserPojo user = new UserPojo("mahmoud3@example.com","12345");
+        UserPojo user = UserSteps.GenerateInvalidLoginData();
 
         //Sending request
         Response res = UserApi.Login(user);
@@ -48,7 +46,7 @@ public class LoginTest {
 
         //Assertions
         assertThat(res.statusCode() , equalTo(400));
-        assertThat(msg.getMessage() , equalTo("Please Fill a correct Password"));
+        assertThat(msg.getMessage() , equalTo("We could not find the email in the database"));
 
     }
 
@@ -56,7 +54,7 @@ public class LoginTest {
     public void User_Login_With_Empty_Data_Field() {
 
         //Test data
-        UserPojo user = new UserPojo("","12345678");
+        UserPojo user = UserSteps.GenerateLoginDataWithEmptyDataField();
 
         //Sending request
         Response res = UserApi.Login(user);
