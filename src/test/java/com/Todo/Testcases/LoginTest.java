@@ -17,10 +17,10 @@ public class LoginTest {
     public void User_Login_With_Valid_Data() {
 
         //Test data
-        UserPojo user = UserSteps.GenerateLoginData();
+        UserPojo user = UserSteps.generateLoginData();
 
         //Sending request
-        Response res = UserApi.Login(user);
+        Response res = UserApi.login(user);
 
         //Deserialization
         UserPojo responseBody = res.body().as(UserPojo.class);
@@ -36,10 +36,10 @@ public class LoginTest {
     public void User_Login_With_Invalid_Data() {
 
         //Test data
-        UserPojo user = UserSteps.GenerateInvalidLoginData();
+        UserPojo user = UserSteps.generateInvalidLoginData();
 
         //Sending request
-        Response res = UserApi.Login(user);
+        Response res = UserApi.login(user);
 
         //Deserialization
         MessagePojo msg = res.body().as(MessagePojo.class);
@@ -54,10 +54,10 @@ public class LoginTest {
     public void User_Login_With_Empty_Data_Field() {
 
         //Test data
-        UserPojo user = UserSteps.GenerateLoginDataWithEmptyDataField();
+        UserPojo user = UserSteps.generateLoginDataWithEmptyDataField();
 
         //Sending request
-        Response res = UserApi.Login(user);
+        Response res = UserApi.login(user);
 
         //Assertions
         assertThat(res.statusCode() , equalTo(400));

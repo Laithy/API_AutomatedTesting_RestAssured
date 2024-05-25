@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class TodoApi {
 
-    public static Response AddTodo(TodoPojo item , String token) {
+    public static Response addTodo(TodoPojo item , String token) {
 
         return
                 given().baseUri("https://todo.qacart.com")
@@ -24,7 +24,7 @@ public class TodoApi {
 
     }
 
-    public static Response ViewTodo(String id , String token) {
+    public static Response viewTodo(String id , String token) {
 
         return
                 given().baseUri("https://todo.qacart.com")
@@ -39,7 +39,7 @@ public class TodoApi {
 
     }
 
-    public static Response DeleteTodo(String id , String token) {
+    public static Response deleteTodo(String id , String token) {
 
         return
                 given().baseUri("https://todo.qacart.com")

@@ -3,6 +3,8 @@ package com.Todo.Testcases;
 import com.Todo.APIs.TodoApi;
 import com.Todo.Models.MessagePojo;
 import com.Todo.Models.TodoPojo;
+import com.Todo.Steps.TodoSteps;
+import com.Todo.Steps.UserSteps;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
@@ -11,9 +13,6 @@ import static org.hamcrest.Matchers.*;
 
 public class TodoTest {
 
-    String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTA1NzcwNDE2MTE4MDAxNDNmYTBhOCIsImZpcnN0TmFtZSI6Ik1haG1vdWQiLCJsYXN0TmFtZSI6IkVsYWl0aHkiLCJpYXQiOjE3MTY2MTEwMDR9._twXOilzGZ3n31tCPwPLI7zu9k_oeE4zPXJN1x_WQ4A";
-    String id = "66517a0241611800143fa6e5";
-
     /*------------------------------------------------------------------------------------------------------------------
     Adds Entry
     Positive scenario*/
@@ -21,18 +20,19 @@ public class TodoTest {
     public void User_Adds_a_New_Entry() {
 
         //Test data
-        TodoPojo item = new TodoPojo(false , "Appium");
+        TodoPojo item = TodoSteps.generateTodo();
+        String token = UserSteps.getUserToken();
 
         //sending request
-        Response res = TodoApi.AddTodo(item,token);
+        Response res = TodoApi.addTodo(item, token);
 
         //Deserialization
         TodoPojo responseBody = res.body().as(TodoPojo.class);
 
         //Assertions
         assertThat(res.statusCode() , equalTo(201));
-        assertThat(responseBody.getIsCompleted() , equalTo(false));
-        assertThat(responseBody.getItem() , equalTo("Appium"));
+        assertThat(responseBody.getIsCompleted() , equalTo(item.getIsCompleted()));
+        assertThat(responseBody.getItem() , equalTo(item.getItem()));
         assertThat(responseBody.getId() , not(equalTo(null)));
 
     }
@@ -42,10 +42,10 @@ public class TodoTest {
     public void User_Adds_a_New_Entry_No_Auth() {
 
         //Test data
-        TodoPojo item = new TodoPojo(false , "Appium");
+        TodoPojo item = TodoSteps.generateTodo();
 
         //Sending request
-        Response res = TodoApi.AddTodo(item,"");
+        Response res = TodoApi.addTodo(item,"");
 
         //Deserialization
         MessagePojo msg = res.body().as(MessagePojo.class);
@@ -60,17 +60,18 @@ public class TodoTest {
     public void User_Adds_a_New_Entry_Empty_Data_Field() {
 
         //Test data
-        TodoPojo item = new TodoPojo("Appium");
+        TodoPojo item = TodoSteps.generateTodoEmptyDataField();
+        String token = UserSteps.getUserToken();
 
         //Sending request
-        Response res = TodoApi.AddTodo(item,token);
+        Response res = TodoApi.addTodo(item,token);
 
         //Deserialization
         MessagePojo msg = res.body().as(MessagePojo.class);
 
         //Assertions
         assertThat(res.statusCode() , equalTo(400));
-        assertThat(msg.getMessage() , equalTo("\"isCompleted\" is required"));
+        assertThat(msg.getMessage() , equalTo("\"item\" is not allowed to be empty"));
 
 
     }
@@ -81,15 +82,21 @@ public class TodoTest {
     @Test
     public void User_Views_The_New_Entry() {
 
+        //Test data
+        TodoPojo todo = TodoSteps.generateTodo();
+        String token = UserSteps.getUserToken();
+        String id = TodoSteps.getTodoID(todo, token);
+        String item = todo.getItem();
+
         //Sending request
-        Response res = TodoApi.ViewTodo(id , token);
+        Response res = TodoApi.viewTodo(id , token);
 
         //Deserialization
         TodoPojo responseBody = res.body().as(TodoPojo.class);
 
         //Assertions
         assertThat(res.statusCode() , equalTo(200));
-        assertThat(responseBody.getItem() , equalTo("Appium"));
+        assertThat(responseBody.getItem() , equalTo(item));
         assertThat(responseBody.getIsCompleted() , equalTo(false));
 
     }
@@ -98,8 +105,13 @@ public class TodoTest {
     @Test
     public void User_Views_The_New_Entry_No_Auth() {
 
+        //Test data
+        TodoPojo todo = TodoSteps.generateTodo();
+        String token = UserSteps.getUserToken();
+        String id = TodoSteps.getTodoID(todo, token);
+
         //Sending request
-        Response res = TodoApi.ViewTodo(id , "");
+        Response res = TodoApi.viewTodo(id , "");
 
         //Deserialization
         MessagePojo msg = res.body().as(MessagePojo.class);
@@ -116,15 +128,21 @@ public class TodoTest {
     @Test
     public void User_Deletes_The_New_Entry() {
 
+        //Test data
+        TodoPojo todo = TodoSteps.generateTodo();
+        String token = UserSteps.getUserToken();
+        String id = TodoSteps.getTodoID(todo, token);
+        String item = todo.getItem();
+
         //Sending request
-        Response res = TodoApi.DeleteTodo(id , token);
+        Response res = TodoApi.deleteTodo(id , token);
 
         //Deserialization
         TodoPojo responseBody = res.body().as(TodoPojo.class);
 
         //Assertions
         assertThat(res.statusCode() , equalTo(200));
-        assertThat(responseBody.getItem() , equalTo("Appium"));
+        assertThat(responseBody.getItem() , equalTo(item));
         assertThat(responseBody.getIsCompleted() , equalTo(false));
 
     }
@@ -133,8 +151,13 @@ public class TodoTest {
     @Test
     public void User_Deletes_The_New_Entry_No_Auth() {
 
+        //Test data
+        TodoPojo todo = TodoSteps.generateTodo();
+        String token = UserSteps.getUserToken();
+        String id = TodoSteps.getTodoID(todo, token);
+
         //Sending request
-        Response res = TodoApi.DeleteTodo(id , "");
+        Response res = TodoApi.deleteTodo(id , "");
 
         //Deserialization
         MessagePojo msg = res.body().as(MessagePojo.class);

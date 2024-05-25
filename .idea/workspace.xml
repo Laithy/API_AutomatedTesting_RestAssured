@@ -5,11 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6bdad29-dac9-478d-86e6-5a9d140c7ac6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Steps/UserSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Steps/TodoSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/TodoApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/TodoApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/Steps/UserSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Steps/UserSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/Testcases/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Testcases/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/Testcases/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Testcases/RegistrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/Testcases/TodoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Testcases/TodoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/JsonFiles/LoginData/LoginDataEmptyDataField.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/JsonFiles/LoginData/LoginDataInvalid.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/JsonFiles/LoginData/LoginDataValid.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/JsonFiles/RegistrationData/RegistrationDataEmptyDataField.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/JsonFiles/RegistrationData/RegistrationDataExistingMail.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/JsonFiles/RegistrationData/RegistrationDataInvalidMail.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/JsonFiles/RegistrationData/RegistrationDataValidData.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/JsonFiles/TaskData/TaskDataInvalid.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/JsonFiles/TaskData/TaskDataValid.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +94,7 @@
       <recent name="C:\Users\Laithy\IdeaProjects\API_AutomatedTesting_RestAssured\src\test\resources\JsonFiles\LoginData" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginTest">
+  <component name="RunManager" selected="TestNG.RegistrationTest">
     <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="API_AutomatedTesting_RestAssured" />
       <extension name="coverage">
@@ -94,42 +106,6 @@
       <option name="PACKAGE_NAME" value="com.Todo.Testcases" />
       <option name="MAIN_CLASS_NAME" value="com.Todo.Testcases.LoginTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest.User_Login_With_Invalid_Data" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="API_AutomatedTesting_RestAssured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Todo.Testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.Todo.Testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.Todo.Testcases.LoginTest" />
-      <option name="METHOD_NAME" value="User_Login_With_Invalid_Data" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest.User_Login_With_Valid_Data" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="API_AutomatedTesting_RestAssured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Todo.Testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.Todo.Testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.Todo.Testcases.LoginTest" />
-      <option name="METHOD_NAME" value="User_Login_With_Valid_Data" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -153,7 +129,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest.User_Registration_With_Empty_Data_Field" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="API_AutomatedTesting_RestAssured" />
       <extension name="coverage">
         <pattern>
@@ -162,8 +138,43 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.Todo.Testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.Todo.Testcases.RegistrationTest" />
-      <option name="METHOD_NAME" value="User_Registration_With_Empty_Data_Field" />
+      <option name="MAIN_CLASS_NAME" value="com.Todo.Testcases.TodoTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoTest.User_Adds_a_New_Entry_Empty_Data_Field" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="API_AutomatedTesting_RestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Todo.Testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Todo.Testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.Todo.Testcases.TodoTest" />
+      <option name="METHOD_NAME" value="User_Adds_a_New_Entry_Empty_Data_Field" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoTest.User_Views_The_New_Entry" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="API_AutomatedTesting_RestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Todo.Testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Todo.Testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.Todo.Testcases.TodoTest" />
+      <option name="METHOD_NAME" value="User_Views_The_New_Entry" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -173,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTest" />
-        <item itemvalue="TestNG.LoginTest.User_Login_With_Invalid_Data" />
-        <item itemvalue="TestNG.LoginTest.User_Login_With_Valid_Data" />
         <item itemvalue="TestNG.RegistrationTest" />
-        <item itemvalue="TestNG.RegistrationTest.User_Registration_With_Empty_Data_Field" />
+        <item itemvalue="TestNG.LoginTest" />
+        <item itemvalue="TestNG.TodoTest" />
+        <item itemvalue="TestNG.TodoTest.User_Views_The_New_Entry" />
+        <item itemvalue="TestNG.TodoTest.User_Adds_a_New_Entry_Empty_Data_Field" />
       </list>
     </recent_temporary>
   </component>
@@ -191,5 +202,27 @@
       <updated>1716514521114</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/Todo/APIs/TodoApi.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

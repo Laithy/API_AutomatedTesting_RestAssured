@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class UserApi {
 
-    public static Response Register (UserPojo user) {
+    public static Response register(UserPojo user) {
 
         return
                 given().baseUri("https://todo.qacart.com")
@@ -23,7 +23,7 @@ public class UserApi {
 
     }
 
-    public static Response Login (UserPojo user) {
+    public static Response login(UserPojo user) {
 
         return
                 given().baseUri("https://todo.qacart.com")

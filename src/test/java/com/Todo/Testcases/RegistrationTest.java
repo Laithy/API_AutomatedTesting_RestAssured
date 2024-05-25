@@ -4,12 +4,10 @@ import com.Todo.APIs.UserApi;
 import com.Todo.Models.MessagePojo;
 import com.Todo.Models.UserPojo;
 import com.Todo.Steps.UserSteps;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 
-import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
@@ -20,10 +18,10 @@ public class RegistrationTest {
     public void User_Registration_With_Valid_Mail() {
 
         //Test data
-        UserPojo user = UserSteps.GenerateUser();
+        UserPojo user = UserSteps.generateUser();
 
         //Sending request
-        Response res = UserApi.Register(user);
+        Response res = UserApi.register(user);
 
         //Deserialization
         UserPojo responseBody = res.body().as(UserPojo.class);
@@ -39,10 +37,10 @@ public class RegistrationTest {
     public void User_Registration_With_Existing_Mail () {
 
         //Test data
-        UserPojo user = UserSteps.GenerateRegisteredUser();
+        UserPojo user = UserSteps.generateRegisteredUser();
 
         //Sending request
-        Response res = UserApi.Register(user);
+        Response res = UserApi.register(user);
 
         //Deserialization
         MessagePojo msg = res.body().as(MessagePojo.class);
@@ -57,10 +55,10 @@ public class RegistrationTest {
     public void User_Registration_With_Invalid_Mail () {
 
         //Test data
-        UserPojo user = UserSteps.GenerateUserWithInvalidMail();
+        UserPojo user = UserSteps.generateUserWithInvalidMail();
 
         //Sending request
-        Response res = UserApi.Register(user);
+        Response res = UserApi.register(user);
 
         //Deserialization
         MessagePojo msg = res.body().as(MessagePojo.class);
@@ -75,10 +73,10 @@ public class RegistrationTest {
     public void User_Registration_With_Empty_Data_Field() {
 
         //Test data
-        UserPojo user = UserSteps.GenerateUserWithEmptyDataField();
+        UserPojo user = UserSteps.generateUserWithEmptyDataField();
 
         //Sending request
-        Response res = UserApi.Register(user);
+        Response res = UserApi.register(user);
 
         //Deserialization
         MessagePojo msg = res.body().as(MessagePojo.class);
