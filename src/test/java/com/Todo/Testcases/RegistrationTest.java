@@ -1,6 +1,7 @@
 package com.Todo.Testcases;
 
 import com.Todo.APIs.UserApi;
+import com.Todo.Data.ErrorMessage;
 import com.Todo.Models.MessagePojo;
 import com.Todo.Models.UserPojo;
 import com.Todo.Steps.UserSteps;
@@ -47,7 +48,7 @@ public class RegistrationTest {
 
         //Assertions
         assertThat(res.statusCode() , equalTo(400));
-        assertThat(msg.getMessage() , equalTo("Email is already exists in the Database"));
+        assertThat(msg.getMessage() , equalTo(ErrorMessage.EMAIL_ALREADY_REGISTERED));
 
     }
 
@@ -65,7 +66,7 @@ public class RegistrationTest {
 
         //Assertions
         assertThat(res.statusCode() , equalTo(400));
-        assertThat(msg.getMessage() , equalTo("\"email\" must be a valid email"));
+        assertThat(msg.getMessage() , equalTo(ErrorMessage.EMAIL_NOT_VALID));
 
     }
 
@@ -83,7 +84,7 @@ public class RegistrationTest {
 
         //Assertions
         assertThat(res.statusCode() , equalTo(400));
-        assertThat(msg.getMessage() , equalTo("\"firstName\" is not allowed to be empty"));
+        assertThat(msg.getMessage() , equalTo(ErrorMessage.EMPTY_FIRSTNAME_FIELD));
 
     }
 

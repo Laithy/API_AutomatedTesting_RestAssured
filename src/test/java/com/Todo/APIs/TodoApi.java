@@ -1,5 +1,7 @@
 package com.Todo.APIs;
 
+import com.Todo.ApiBase.RequestSpec;
+import com.Todo.Data.Route;
 import com.Todo.Models.TodoPojo;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -11,27 +13,27 @@ public class TodoApi {
     public static Response addTodo(TodoPojo item , String token) {
 
         return
-                given().baseUri("https://todo.qacart.com")
-                .auth().oauth2(token)
-                .contentType(ContentType.JSON)
-                .body(item)
+                given()
+                        .spec(RequestSpec.getRequestSpec())
+                        .auth().oauth2(token)
+                        .body(item)
 
-                .when().post("/api/v1/tasks")
+                        .when().post(Route.TASKS_ROUTE)
 
-                .then()
-                .log().all()
-                .extract().response();
+                        .then()
+                        .log().all()
+                        .extract().response();
 
     }
 
     public static Response viewTodo(String id , String token) {
 
         return
-                given().baseUri("https://todo.qacart.com")
+                given()
+                        .spec(RequestSpec.getRequestSpec())
                         .auth().oauth2(token)
-                        .contentType(ContentType.JSON)
 
-                        .when().get("/api/v1/tasks/" + id)
+                        .when().get(Route.TASKS_ROUTE + id)
 
                         .then()
                         .log().all()
@@ -42,11 +44,11 @@ public class TodoApi {
     public static Response deleteTodo(String id , String token) {
 
         return
-                given().baseUri("https://todo.qacart.com")
+                given()
+                        .spec(RequestSpec.getRequestSpec())
                         .auth().oauth2(token)
-                        .contentType(ContentType.JSON)
 
-                        .when().delete("/api/v1/tasks/" + id)
+                        .when().delete(Route.TASKS_ROUTE + id)
 
                         .then()
                         .log().all()

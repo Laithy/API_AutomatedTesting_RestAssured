@@ -1,6 +1,7 @@
 package com.Todo.Testcases;
 
 import com.Todo.APIs.UserApi;
+import com.Todo.Data.ErrorMessage;
 import com.Todo.Models.MessagePojo;
 import com.Todo.Models.UserPojo;
 import com.Todo.Steps.UserSteps;
@@ -46,7 +47,7 @@ public class LoginTest {
 
         //Assertions
         assertThat(res.statusCode() , equalTo(400));
-        assertThat(msg.getMessage() , equalTo("We could not find the email in the database"));
+        assertThat(msg.getMessage() , equalTo(ErrorMessage.EMAIL_NOT_FOUND));
 
     }
 

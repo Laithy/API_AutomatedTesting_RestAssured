@@ -1,6 +1,7 @@
 package com.Todo.Testcases;
 
 import com.Todo.APIs.TodoApi;
+import com.Todo.Data.ErrorMessage;
 import com.Todo.Models.MessagePojo;
 import com.Todo.Models.TodoPojo;
 import com.Todo.Steps.TodoSteps;
@@ -52,7 +53,7 @@ public class TodoTest {
 
         //Assertions
         assertThat(res.statusCode() , equalTo(401));
-        assertThat(msg.getMessage() , equalTo("Unauthorized, please insert a correct token"));
+        assertThat(msg.getMessage() , equalTo(ErrorMessage.UNAUTHORIZED_ACCESS));
 
     }
 
@@ -71,7 +72,7 @@ public class TodoTest {
 
         //Assertions
         assertThat(res.statusCode() , equalTo(400));
-        assertThat(msg.getMessage() , equalTo("\"item\" is not allowed to be empty"));
+        assertThat(msg.getMessage() , equalTo(ErrorMessage.EMPTY_ITEM_FIELD));
 
 
     }
@@ -118,7 +119,7 @@ public class TodoTest {
 
         //Assertions
         assertThat(res.statusCode() , equalTo(401));
-        assertThat(msg.getMessage() , equalTo("Unauthorized, please insert a correct token"));
+        assertThat(msg.getMessage() , equalTo(ErrorMessage.UNAUTHORIZED_ACCESS));
 
     }
 
@@ -164,7 +165,7 @@ public class TodoTest {
 
         //Assertions
         assertThat(res.statusCode() , equalTo(401));
-        assertThat(msg.getMessage() , equalTo("Unauthorized, please insert a correct token"));
+        assertThat(msg.getMessage() , equalTo(ErrorMessage.UNAUTHORIZED_ACCESS));
 
     }
     //------------------------------------------------------------------------------------------------------------------
