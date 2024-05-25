@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6bdad29-dac9-478d-86e6-5a9d140c7ac6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Models/TodoPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Models/UserPojo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/RegistrationTest.java" afterDir="false" />
@@ -38,39 +36,39 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.LoginTest.User_Login_With_Empty_Data_Field.executor": "Run",
-    "TestNG.LoginTest.User_Login_With_Invalid_Data.executor": "Run",
-    "TestNG.LoginTest.User_Login_With_Valid_Data.executor": "Run",
-    "TestNG.LoginTest.executor": "Run",
-    "TestNG.RegistrationTest.User_Registration_With_Existing_Mail.executor": "Run",
-    "TestNG.RegistrationTest.User_Registration_With_Valid_Mail.executor": "Run",
-    "TestNG.RegistrationTest.executor": "Run",
-    "TestNG.TodoTest.User_Adds_a_New_Entry.executor": "Run",
-    "TestNG.TodoTest.User_Adds_a_New_Entry_Empty_Data_Field.executor": "Run",
-    "TestNG.TodoTest.User_Adds_a_New_Entry_No_Auth.executor": "Run",
-    "TestNG.TodoTest.User_Deletes_The_New_Entry.executor": "Run",
-    "TestNG.TodoTest.User_Deletes_The_New_Entry_No_Auth.executor": "Run",
-    "TestNG.TodoTest.User_Deletes_The_New_Entry_Wrong_ID.executor": "Run",
-    "TestNG.TodoTest.User_Views_The_New_Entry.executor": "Run",
-    "TestNG.TodoTest.User_Views_The_New_Entry_No_Auth.executor": "Run",
-    "TestNG.TodoTest.executor": "Run",
-    "TestNG.UserTest.UserRegistrationWithEmptyDataField.executor": "Run",
-    "TestNG.UserTest.UserRegistrationWithExistingMail.executor": "Run",
-    "TestNG.UserTest.UserRegistrationWithInvalidMail.executor": "Run",
-    "TestNG.UserTest.User_Login_With_Valid_Data.executor": "Run",
-    "TestNG.UserTest.user_registration.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Laithy/IdeaProjects/API_AutomatedTesting_RestAssured/src/test/resources/JsonFiles",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TestNG.LoginTest.User_Login_With_Empty_Data_Field.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.User_Login_With_Invalid_Data.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.User_Login_With_Valid_Data.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationTest.User_Registration_With_Existing_Mail.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationTest.User_Registration_With_Valid_Mail.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TodoTest.User_Adds_a_New_Entry.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TodoTest.User_Adds_a_New_Entry_Empty_Data_Field.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TodoTest.User_Adds_a_New_Entry_No_Auth.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TodoTest.User_Deletes_The_New_Entry.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TodoTest.User_Deletes_The_New_Entry_No_Auth.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TodoTest.User_Deletes_The_New_Entry_Wrong_ID.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TodoTest.User_Views_The_New_Entry.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TodoTest.User_Views_The_New_Entry_No_Auth.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TodoTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.UserRegistrationWithEmptyDataField.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.UserRegistrationWithExistingMail.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.UserRegistrationWithInvalidMail.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.User_Login_With_Valid_Data.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.user_registration.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Laithy/IdeaProjects/API_AutomatedTesting_RestAssured/src/test/resources/JsonFiles&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Laithy\IdeaProjects\API_AutomatedTesting_RestAssured\src\test\resources\JsonFiles" />
@@ -81,7 +79,42 @@
       <recent name="C:\Users\Laithy\IdeaProjects\API_AutomatedTesting_RestAssured\src\test\resources\JsonFiles\LoginData" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TodoTest.User_Deletes_The_New_Entry">
+  <component name="RunManager" selected="TestNG.TodoTest.User_Views_The_New_Entry">
+    <configuration name="LoginTest.User_Login_With_Valid_Data" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="API_AutomatedTesting_RestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Todo.APIs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Todo.APIs" />
+      <option name="MAIN_CLASS_NAME" value="com.Todo.APIs.LoginTest" />
+      <option name="METHOD_NAME" value="User_Login_With_Valid_Data" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="API_AutomatedTesting_RestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Todo.APIs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Todo.APIs" />
+      <option name="MAIN_CLASS_NAME" value="com.Todo.APIs.TodoTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TodoTest.User_Adds_a_New_Entry" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="API_AutomatedTesting_RestAssured" />
       <extension name="coverage">
@@ -100,7 +133,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoTest.User_Deletes_The_New_Entry" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoTest.User_Adds_a_New_Entry_Empty_Data_Field" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="API_AutomatedTesting_RestAssured" />
       <extension name="coverage">
         <pattern>
@@ -110,25 +143,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.Todo.APIs" />
       <option name="MAIN_CLASS_NAME" value="com.Todo.APIs.TodoTest" />
-      <option name="METHOD_NAME" value="User_Deletes_The_New_Entry" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoTest.User_Deletes_The_New_Entry_No_Auth" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="API_AutomatedTesting_RestAssured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Todo.APIs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.Todo.APIs" />
-      <option name="MAIN_CLASS_NAME" value="com.Todo.APIs.TodoTest" />
-      <option name="METHOD_NAME" value="User_Deletes_The_New_Entry_No_Auth" />
+      <option name="METHOD_NAME" value="User_Adds_a_New_Entry_Empty_Data_Field" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -154,31 +169,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoTest.User_Views_The_New_Entry_No_Auth" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="API_AutomatedTesting_RestAssured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Todo.APIs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.Todo.APIs" />
-      <option name="MAIN_CLASS_NAME" value="com.Todo.APIs.TodoTest" />
-      <option name="METHOD_NAME" value="User_Views_The_New_Entry_No_Auth" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TodoTest.User_Deletes_The_New_Entry" />
-        <item itemvalue="TestNG.TodoTest.User_Deletes_The_New_Entry_No_Auth" />
-        <item itemvalue="TestNG.TodoTest.User_Views_The_New_Entry_No_Auth" />
         <item itemvalue="TestNG.TodoTest.User_Views_The_New_Entry" />
         <item itemvalue="TestNG.TodoTest.User_Adds_a_New_Entry" />
+        <item itemvalue="TestNG.TodoTest.User_Adds_a_New_Entry_Empty_Data_Field" />
+        <item itemvalue="TestNG.TodoTest" />
+        <item itemvalue="TestNG.LoginTest.User_Login_With_Valid_Data" />
       </list>
     </recent_temporary>
   </component>
