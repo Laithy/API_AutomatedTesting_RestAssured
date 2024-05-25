@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6bdad29-dac9-478d-86e6-5a9d140c7ac6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/TodoApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/UserApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Models/MessagePojo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/RegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/TodoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/TodoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Testcases/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Testcases/RegistrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Todo/APIs/TodoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Todo/Testcases/TodoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,52 +82,17 @@
       <recent name="C:\Users\Laithy\IdeaProjects\API_AutomatedTesting_RestAssured\src\test\resources\JsonFiles\LoginData" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TodoTest.User_Views_The_New_Entry">
-    <configuration name="LoginTest.User_Login_With_Valid_Data" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="API_AutomatedTesting_RestAssured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Todo.APIs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.Todo.APIs" />
-      <option name="MAIN_CLASS_NAME" value="com.Todo.APIs.LoginTest" />
-      <option name="METHOD_NAME" value="User_Login_With_Valid_Data" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="API_AutomatedTesting_RestAssured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Todo.APIs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.Todo.APIs" />
-      <option name="MAIN_CLASS_NAME" value="com.Todo.APIs.TodoTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.TodoTest.User_Adds_a_New_Entry">
     <configuration name="TodoTest.User_Adds_a_New_Entry" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="API_AutomatedTesting_RestAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Todo.APIs.*" />
+          <option name="PATTERN" value="com.Todo.Testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.Todo.APIs" />
-      <option name="MAIN_CLASS_NAME" value="com.Todo.APIs.TodoTest" />
+      <option name="PACKAGE_NAME" value="com.Todo.Testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.Todo.Testcases.TodoTest" />
       <option name="METHOD_NAME" value="User_Adds_a_New_Entry" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -133,17 +101,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoTest.User_Adds_a_New_Entry_Empty_Data_Field" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoTest.User_Deletes_The_New_Entry" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="API_AutomatedTesting_RestAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Todo.APIs.*" />
+          <option name="PATTERN" value="com.Todo.Testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.Todo.APIs" />
-      <option name="MAIN_CLASS_NAME" value="com.Todo.APIs.TodoTest" />
-      <option name="METHOD_NAME" value="User_Adds_a_New_Entry_Empty_Data_Field" />
+      <option name="PACKAGE_NAME" value="com.Todo.Testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.Todo.Testcases.TodoTest" />
+      <option name="METHOD_NAME" value="User_Deletes_The_New_Entry" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoTest.User_Deletes_The_New_Entry_No_Auth" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="API_AutomatedTesting_RestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Todo.Testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Todo.Testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.Todo.Testcases.TodoTest" />
+      <option name="METHOD_NAME" value="User_Deletes_The_New_Entry_No_Auth" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -155,13 +141,31 @@
       <module name="API_AutomatedTesting_RestAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Todo.APIs.*" />
+          <option name="PATTERN" value="com.Todo.Testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.Todo.APIs" />
-      <option name="MAIN_CLASS_NAME" value="com.Todo.APIs.TodoTest" />
+      <option name="PACKAGE_NAME" value="com.Todo.Testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.Todo.Testcases.TodoTest" />
       <option name="METHOD_NAME" value="User_Views_The_New_Entry" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoTest.User_Views_The_New_Entry_No_Auth" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="API_AutomatedTesting_RestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Todo.Testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Todo.Testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.Todo.Testcases.TodoTest" />
+      <option name="METHOD_NAME" value="User_Views_The_New_Entry_No_Auth" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -171,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TodoTest.User_Views_The_New_Entry" />
         <item itemvalue="TestNG.TodoTest.User_Adds_a_New_Entry" />
-        <item itemvalue="TestNG.TodoTest.User_Adds_a_New_Entry_Empty_Data_Field" />
-        <item itemvalue="TestNG.TodoTest" />
-        <item itemvalue="TestNG.LoginTest.User_Login_With_Valid_Data" />
+        <item itemvalue="TestNG.TodoTest.User_Deletes_The_New_Entry" />
+        <item itemvalue="TestNG.TodoTest.User_Deletes_The_New_Entry_No_Auth" />
+        <item itemvalue="TestNG.TodoTest.User_Views_The_New_Entry_No_Auth" />
+        <item itemvalue="TestNG.TodoTest.User_Views_The_New_Entry" />
       </list>
     </recent_temporary>
   </component>

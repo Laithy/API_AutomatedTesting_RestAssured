@@ -1,9 +1,10 @@
-package com.Todo.APIs;
+package com.Todo.Testcases;
 
+import com.Todo.APIs.UserApi;
+import com.Todo.Models.MessagePojo;
 import com.Todo.Models.UserPojo;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.codehaus.groovy.control.io.ReaderSource;
 import org.testng.annotations.Test;
 
 
@@ -21,20 +22,14 @@ public class LoginTest {
         UserPojo user = new UserPojo("mahmoud3@example.com","12345678");
 
         //Sending request
-        Response res =
-        given().baseUri("https://todo.qacart.com")
-                .contentType(ContentType.JSON)
-                .body(user)
+        Response res = UserApi.Login(user);
 
-                .when().post("/api/v1/users/login")
-
-                .then()
-                .log().all()
-                .extract().response();
+        //Deserialization
+        UserPojo responseBody = res.body().as(UserPojo.class);
 
         //Assertions
         assertThat(res.statusCode() , equalTo(200));
-        assertThat(res.path("access_token") , not(equalTo(null)));
+        assertThat(responseBody.getAccessToken() , not(equalTo(null)));
 
     }
 
@@ -46,20 +41,14 @@ public class LoginTest {
         UserPojo user = new UserPojo("mahmoud3@example.com","12345");
 
         //Sending request
-        Response res =
-        given().baseUri("https://todo.qacart.com")
-                .contentType(ContentType.JSON)
-                .body(user)
+        Response res = UserApi.Login(user);
 
-                .when().post("/api/v1/users/login")
-
-                .then()
-                .log().all()
-                .extract().response();
+        //Deserialization
+        MessagePojo msg = res.body().as(MessagePojo.class);
 
         //Assertions
         assertThat(res.statusCode() , equalTo(400));
-        assertThat(res.path("message") , equalTo("Please Fill a correct Password"));
+        assertThat(msg.getMessage() , equalTo("Please Fill a correct Password"));
 
     }
 
@@ -70,16 +59,7 @@ public class LoginTest {
         UserPojo user = new UserPojo("","12345678");
 
         //Sending request
-        Response res =
-        given().baseUri("https://todo.qacart.com")
-                .contentType(ContentType.JSON)
-                .body(user)
-
-                .when().post("/api/v1/users/login")
-
-                .then()
-                .log().all()
-                .extract().response();
+        Response res = UserApi.Login(user);
 
         //Assertions
         assertThat(res.statusCode() , equalTo(400));
